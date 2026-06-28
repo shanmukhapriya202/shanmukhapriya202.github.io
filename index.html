@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shanmukha Priyamadhuri Suri | Product Manager</title>
+  <title>Shanmukha Priyamadhuri Suri | Assistant Project Manager</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -251,9 +251,9 @@
     }
     .hero-avatar-meta { display: flex; flex-direction: column; gap: 0.3rem; }
     .hero-location { font-size: 0.8rem; color: var(--ink-light); font-weight: 500; }
-    .hero-eyebrow { margin-bottom: 0 !important; }
+    .hero-eyebrow { margin-bottom: 0.2rem !important; }
 
-        /* Hero right metric cards */
+        /* Hero right — metric cards */
     .hero-right { display: flex; flex-direction: column; gap: 1.1rem; }
     .metric-card {
       background: var(--bg-card);
@@ -557,6 +557,56 @@
       transform: translateY(-2px);
     }
 
+    /* ── TIMELINE PRODUCTS ── */
+    .timeline-products {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 0.45rem;
+      margin-bottom: 0.9rem;
+    }
+    .tp-label { font-size: 0.72rem; font-weight: 600; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.1em; margin-right: 0.2rem; }
+    .tp-chip {
+      background: var(--indigo-dim); border: 1px solid var(--indigo-mid);
+      color: var(--indigo); font-size: 0.75rem; font-weight: 600;
+      padding: 0.2rem 0.65rem; border-radius: 20px; letter-spacing: 0.03em;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    #certifications { background: var(--bg); }
+    .cred-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .cred-col { display: flex; flex-direction: column; }
+    .cred-col:first-child { justify-content: center; align-self: center; }
+    .cred-col-title { font-size: 0.9rem; font-weight: 700; color: var(--ink); margin-bottom: 1.1rem; }
+    .cred-card {
+      display: flex; align-items: flex-start; gap: 1rem;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem; box-shadow: var(--shadow);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .cred-card:hover { box-shadow: var(--shadow-lg); transform: translateX(4px); }
+    .cred-badge {
+      min-width: 40px; height: 40px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.68rem; font-weight: 800; letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .cred-badge.indigo { background: var(--indigo-dim); color: var(--indigo); }
+    .cred-badge.coral  { background: var(--coral-dim);  color: #C2410C; }
+    .cred-badge.purple { background: rgba(139,92,246,0.1); color: #6D28D9; }
+    .cred-badge.green  { background: rgba(16,185,129,0.1); color: #047857; }
+    .cred-name { font-size: 0.88rem; font-weight: 600; color: var(--ink); margin-bottom: 0.2rem; line-height: 1.4; }
+    .cred-org  { font-size: 0.8rem; color: var(--indigo); font-weight: 500; }
+    .cred-year { font-size: 0.75rem; color: var(--ink-light); margin-top: 0.15rem; }
+    .cred-status {
+      display: inline-block; margin-left: 0.4rem;
+      background: rgba(249,115,22,0.12); color: var(--coral);
+      font-size: 0.68rem; font-weight: 700; padding: 0.1rem 0.45rem;
+      border-radius: 20px; vertical-align: middle; letter-spacing: 0.05em;
+    }
+    @media (max-width: 768px) {
+      .cred-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .cred-card { padding: 0.85rem 1rem; }
+    }
+
     /* ── FOOTER ── */
     footer {
       background: var(--ink);
@@ -569,138 +619,168 @@
     footer span:first-child { color: rgba(255,255,255,0.65); }
 
     /* ── RESPONSIVE ── */
-    /* ── TABLET (max 1024px) ── */
-    @media (max-width: 1024px) {
-      nav { padding: 1.1rem 2rem; }
-      #hero { padding: 6rem 2.5rem 3rem; gap: 2.5rem; }
-      section { padding: 5rem 2.5rem; }
-      .metric-number { font-size: 2rem; min-width: 72px; }
-    }
-
-    /* ── MOBILE (max 768px) ── */
-    @media (max-width: 768px) {
-
-      /* NAV hamburger */
-      nav {
-        padding: 1rem 1.25rem;
-        position: fixed;
-      }
-      .nav-logo { font-size: 1rem; }
-      .nav-links { display: none; }
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(250,250,248,0.97);
-        backdrop-filter: blur(16px);
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-        z-index: 99;
-      }
-      .nav-links.open a {
-        font-size: 1.1rem;
-        letter-spacing: 0.12em;
-      }
-      .nav-hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        z-index: 101;
-        background: none;
-        border: none;
-        padding: 4px;
-      }
-      .nav-hamburger span {
-        display: block;
-        width: 24px; height: 2px;
-        background: var(--ink);
-        border-radius: 2px;
-        transition: transform 0.3s, opacity 0.3s;
-      }
-      .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-      .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-      /* HERO */
-      #hero {
-        grid-template-columns: 1fr;
-        padding: 5.5rem 1.25rem 2.5rem;
-        min-height: auto;
-        gap: 0;
-      }
-      .hero-right { display: none; }
-      .hero-photo-wrap { display: none; }
-      .hero-avatar-row { margin-bottom: 1.2rem; }
-      .hero-avatar-img { width: 58px; height: 58px; }
-      .hero-name { font-size: 2.6rem; margin-bottom: 1rem; }
-      .hero-tagline { font-size: 0.95rem; margin-bottom: 2rem; }
-      .hero-eyebrow { font-size: 0.68rem; }
-      .btn-primary { padding: 0.8rem 1.6rem; font-size: 0.85rem; }
-      .btn-secondary { font-size: 0.85rem; }
-
-      /* TICKER */
-      .ticker-inner { gap: 2rem; }
-      .ticker-inner span { font-size: 0.72rem; }
-
-      /* SECTIONS */
-      section { padding: 3.5rem 1.25rem; }
-      .section-title { font-size: 1.7rem; margin-bottom: 2rem; }
-
-      /* ABOUT */
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .skills-section-wrap { position: static; gap: 0.85rem; }
-      .about-text { font-size: 0.93rem; }
-      .about-quick-facts { margin-top: 1.25rem; padding-top: 1.25rem; }
-      .quick-fact { font-size: 0.82rem; }
-
-      /* SKILL CARDS */
-      .skill-category { border-radius: 8px; }
-      .skill-cat-header { padding: 0.65rem 1rem 0.55rem; }
-      .skill-cat-label { font-size: 0.72rem; }
-      .skill-pills { padding: 0.6rem 1rem 0.7rem; gap: 0.35rem; }
-      .pill { font-size: 0.74rem; padding: 0.3rem 0.7rem; }
-
-      /* TIMELINE */
-      .timeline { padding-left: 1.5rem; }
-      .timeline-dot { left: -1.95rem; width: 12px; height: 12px; }
-      .timeline-card { padding: 1.2rem 1.25rem; border-radius: 8px; }
-      .timeline-meta { flex-direction: column; gap: 0.3rem; align-items: flex-start; }
-      .timeline-period { margin-left: 0; font-size: 0.7rem; }
-      .timeline-role { font-size: 0.97rem; }
-      .timeline-company { font-size: 0.82rem; }
-      .timeline-bullets li { font-size: 0.87rem; }
-
-      /* ACHIEVEMENTS */
-      .achieve-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
-      .achieve-card { padding: 1.4rem 1.25rem; border-radius: 8px; }
-      .achieve-stat { font-size: 1.9rem; }
-      .achieve-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
-      .achieve-desc { font-size: 0.8rem; }
-
-      /* CONTACT */
-      #contact { padding: 4rem 1.25rem; }
-      .contact-links { flex-direction: column; align-items: center; gap: 0.75rem; }
-      .contact-chip { width: 100%; max-width: 320px; justify-content: center; font-size: 0.84rem; }
-      .contact-sub { font-size: 0.93rem; }
-
-      /* FOOTER */
-      footer { flex-direction: column; gap: 0.4rem; text-align: center; padding: 1.25rem; font-size: 0.74rem; }
-    }
-
-    /* ── SMALL MOBILE (max 400px) ── */
-    @media (max-width: 400px) {
-      .hero-name { font-size: 2.1rem; }
-      .achieve-grid { grid-template-columns: 1fr; }
+          .achieve-grid { grid-template-columns: 1fr; }
       .section-title { font-size: 1.5rem; }
     }
 
     /* ── FADE-IN ── */
     .fade-in { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .fade-in.visible { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) {
+    /* ══════════════════════════════════
+       RESPONSIVE — TABLET & MOBILE
+    ══════════════════════════════════ */
+
+    /* Hide hamburger on desktop */
+    .nav-hamburger { display: none; }
+
+    /* ── TABLET 1024px ── */
+    @media (max-width: 1024px) {
+      nav { padding: 1rem 2rem; }
+      #hero { padding: 6rem 2rem 3rem; gap: 2rem; }
+      section { padding: 4.5rem 2rem; }
+      .metric-number { font-size: 1.9rem; min-width: 68px; }
+      .metric-card { padding: 1.1rem 1.3rem; gap: 1rem; }
+      .hero-name { font-size: 3.2rem; }
+      .cred-grid { gap: 2rem; }
+    }
+
+    /* ── MOBILE 768px ── */
+    @media (max-width: 768px) {
+
+      /* NAV */
+      nav { padding: 0.9rem 1.25rem; }
+      .nav-logo { font-size: 1rem; }
+      .nav-links { display: none; }
+      .nav-hamburger {
+        display: flex; flex-direction: column; gap: 5px;
+        cursor: pointer; z-index: 102; background: none;
+        border: none; padding: 4px; position: relative;
+      }
+      .nav-hamburger span {
+        display: block; width: 24px; height: 2px;
+        background: var(--ink); border-radius: 2px;
+        transition: transform 0.3s, opacity 0.3s;
+      }
+      .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+      .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+      /* MOBILE MENU OVERLAY */
+      .nav-links.open {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: #FAFAF8;
+        justify-content: center;
+        align-items: center;
+        gap: 2.2rem;
+        z-index: 101;
+        margin: 0; padding: 0; list-style: none;
+      }
+      .nav-links.open li { display: block; text-align: center; }
+      .nav-links.open a {
+        font-size: 1.3rem; font-weight: 700;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        color: var(--ink) !important; display: block;
+        padding: 0.4rem 1.5rem;
+        border-bottom: 2px solid transparent;
+        transition: color 0.2s, border-color 0.2s;
+      }
+      .nav-links.open a:hover { color: var(--indigo) !important; border-bottom-color: var(--coral); }
+
+      /* HERO */
+      #hero {
+        grid-template-columns: 1fr;
+        padding: 5rem 1.25rem 2.5rem;
+        min-height: auto; gap: 0;
+      }
+      .hero-right { display: none; }
+      .hero-avatar-img { width: 56px; height: 56px; }
+      .hero-avatar-row { margin-bottom: 1.1rem; gap: 0.85rem; }
+      .hero-name { font-size: 2.5rem; margin-bottom: 1rem; }
+      .hero-tagline { font-size: 0.93rem; margin-bottom: 1.75rem; }
+      .hero-eyebrow { font-size: 0.66rem; padding: 0.3rem 0.75rem; }
+      .btn-primary { padding: 0.75rem 1.5rem; font-size: 0.84rem; }
+      .btn-secondary { font-size: 0.84rem; }
+
+      /* TICKER */
+      .ticker-inner { gap: 1.75rem; }
+      .ticker-inner span { font-size: 0.7rem; }
+
+      /* SECTIONS */
+      section { padding: 3rem 1.25rem; }
+      #contact { padding: 3.5rem 1.25rem; }
+      .section-title { font-size: 1.6rem; margin-bottom: 1.75rem; }
+      .section-title::after { width: 36px; }
+
+      /* ABOUT */
+      .about-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+      .skills-section-wrap { position: static !important; top: auto; gap: 0.75rem; }
+      .about-text { font-size: 0.92rem; }
+      .about-text p { margin-bottom: 0.9rem; }
+      .about-quick-facts { margin-top: 1rem; padding-top: 1rem; gap: 0.5rem; }
+      .quick-fact { font-size: 0.8rem; }
+
+      /* SKILL CARDS */
+      .skill-category { border-radius: 8px; }
+      .skill-cat-header { padding: 0.6rem 0.9rem 0.5rem; }
+      .skill-cat-label { font-size: 0.7rem; }
+      .skill-cat-icon { width: 28px; height: 28px; font-size: 0.85rem; }
+      .skill-pills { padding: 0.55rem 0.9rem 0.65rem; gap: 0.3rem; }
+      .pill { font-size: 0.72rem; padding: 0.28rem 0.65rem; }
+
+      /* TIMELINE */
+      .timeline { padding-left: 1.4rem; }
+      .timeline::before { width: 1px; }
+      .timeline-dot { left: -1.85rem; width: 11px; height: 11px; top: 0.4rem; }
+      .timeline-item { margin-bottom: 2rem; }
+      .timeline-card { padding: 1.1rem 1.1rem; border-radius: 8px; }
+      .timeline-meta { flex-direction: column; gap: 0.25rem; align-items: flex-start; }
+      .timeline-period { margin-left: 0; font-size: 0.69rem; padding: 0.2rem 0.6rem; }
+      .timeline-role { font-size: 0.95rem; }
+      .timeline-company { font-size: 0.8rem; }
+      .timeline-bullets li { font-size: 0.85rem; line-height: 1.6; padding-left: 1rem; }
+      .timeline-products { gap: 0.35rem; margin-bottom: 0.7rem; }
+      .tp-chip { font-size: 0.7rem; padding: 0.15rem 0.55rem; }
+
+      /* ACHIEVEMENTS */
+      .achieve-grid { grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+      .achieve-card { padding: 1.25rem 1rem; border-radius: 8px; }
+      .achieve-stat { font-size: 1.85rem; }
+      .achieve-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
+      .achieve-desc { font-size: 0.78rem; line-height: 1.5; }
+
+      /* CREDENTIALS */
+      .cred-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .cred-col:first-child { align-self: auto; justify-content: flex-start; }
+      .cred-card { padding: 0.8rem 1rem; gap: 0.75rem; }
+      .cred-badge { min-width: 36px; height: 36px; font-size: 0.62rem; border-radius: 6px; }
+      .cred-name { font-size: 0.83rem; }
+      .cred-org { font-size: 0.75rem; }
+      .cred-year { font-size: 0.7rem; }
+      .cred-col-title { font-size: 0.85rem; margin-bottom: 0.75rem; }
+
+      /* CONTACT */
+      .contact-links { flex-direction: column; align-items: stretch; gap: 0.65rem; }
+      .contact-chip { justify-content: center; font-size: 0.83rem; padding: 0.75rem 1.25rem; }
+      .contact-sub { font-size: 0.92rem; margin-bottom: 2rem; }
+
+      /* FOOTER */
+      footer { flex-direction: column; gap: 0.4rem; text-align: center; padding: 1.25rem; font-size: 0.73rem; }
+    }
+
+    /* ── SMALL PHONES 400px ── */
+    @media (max-width: 400px) {
+      .hero-name { font-size: 2rem; }
+      .achieve-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 1.4rem; }
+      #hero { padding: 4.5rem 1rem 2rem; }
+      section { padding: 2.5rem 1rem; }
+      nav { padding: 0.85rem 1rem; }
+    }
+
+        @media (prefers-reduced-motion: reduce) {
       .fade-in { opacity: 1; transform: none; transition: none; }
       .ticker-inner { animation-play-state: paused; }
     }
@@ -715,6 +795,7 @@
     <li><a href="#about" onclick="closeMenu()">About</a></li>
     <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
     <li><a href="#achievements" onclick="closeMenu()">Impact</a></li>
+    <li><a href="#certifications" onclick="closeMenu()">Credentials</a></li>
     <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
@@ -731,7 +812,7 @@
         <span class="hero-avatar-badge">PM</span>
       </div>
       <div class="hero-avatar-meta">
-        <div class="hero-eyebrow">✦ Product Manager · SaaS · FinTech · AI</div>
+        <div class="hero-eyebrow">✦ Project Management · SaaS · FinTech · Software Delivery</div>
         <div class="hero-location">📍 Hyderabad, Telangana</div>
       </div>
     </div>
@@ -739,7 +820,7 @@
       Priyamadhuri<br><span>Suri</span>
     </h1>
     <p class="hero-tagline">
-      5+ years turning complex customer problems into elegant product solutions across enterprise SaaS, FinTech, and AI-assisted workflows.
+      5+ years delivering enterprise SaaS solutions — from requirements to production — across FinTech, CRM, and HRTech domains.
     </p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">
@@ -785,29 +866,29 @@
 <!-- TICKER -->
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-inner">
-    <span>Product Strategy</span>
-    <span>Agile & Scrum</span>
-    <span>Backlog Prioritization</span>
-    <span>KPI Dashboards</span>
-    <span>Generative AI</span>
+    <span>Project Management</span>
+    <span>Agile & SDLC</span>
+    <span>Release Management</span>
     <span>Stakeholder Management</span>
-    <span>API Integrations</span>
-    <span>SQL & Python</span>
-    <span>User Research</span>
-    <span>Customer Onboarding</span>
-    <span>Roadmap Planning</span>
+    <span>Generative AI</span>
+    <span>SaaS Implementation</span>
+    <span>API Testing</span>
+    <span>SQL & MySQL</span>
+    <span>Client Onboarding</span>
+    <span>Software Delivery</span>
+    <span>Requirement Gathering</span>
     <span>Prompt Engineering</span>
-    <span>Product Strategy</span>
-    <span>Agile & Scrum</span>
-    <span>Backlog Prioritization</span>
-    <span>KPI Dashboards</span>
-    <span>Generative AI</span>
+    <span>Project Management</span>
+    <span>Agile & SDLC</span>
+    <span>Release Management</span>
     <span>Stakeholder Management</span>
-    <span>API Integrations</span>
-    <span>SQL & Python</span>
-    <span>User Research</span>
-    <span>Customer Onboarding</span>
-    <span>Roadmap Planning</span>
+    <span>Generative AI</span>
+    <span>SaaS Implementation</span>
+    <span>API Testing</span>
+    <span>SQL & MySQL</span>
+    <span>Client Onboarding</span>
+    <span>Software Delivery</span>
+    <span>Requirement Gathering</span>
     <span>Prompt Engineering</span>
   </div>
 </div>
@@ -822,15 +903,15 @@
   </div>
   <div class="about-grid">
     <div class="about-text fade-in">
-      <p>I'm a Product Manager with <strong>5+ years of experience</strong> leading SaaS and FinTech product delivery from first customer conversation to production deployment. I care deeply about translating messy, real-world customer needs into clear requirements that engineering teams can actually build.</p>
-      <p>My approach combines structured product thinking (roadmaps, user stories, acceptance criteria) with a sharp eye for data I live in KPI dashboards and usage trends, using them to make decisions that stick.</p>
-      <p>More recently, I've been exploring how <strong>Generative AI tools</strong> (ChatGPT, Claude, Microsoft Copilot) can genuinely improve product workflows not just as novelty, but as practical levers for documentation quality, requirement clarity, and faster iteration.</p>
-      <p>Based in <strong>Hyderabad</strong>, pursuing my MBA at Manipal University Jaipur alongside full-time product work.</p>
+      <p>I'm an <strong>Assistant Project Manager</strong> with 5+ years of experience delivering enterprise SaaS solutions across FinTech, CRM, and HRTech domains — from requirement gathering through production deployment. I thrive at the intersection of business needs, technical teams, and client success.</p>
+      <p>I've coordinated <strong>70+ software releases</strong>, managed end-to-end implementations of products like SmartDCM, LeadGER, and Payroll HRM, and reduced onboarding time by 40% through process standardization and documentation improvements.</p>
+      <p>I actively use <strong>AI productivity tools</strong> (ChatGPT, Claude, Gemini) to streamline workflows — cutting manual documentation effort by 30% — and bring hands-on experience with Postman, MySQL, GCP, and Jira to every delivery.</p>
+      <p>Based in <strong>Hyderabad</strong>, currently pursuing my MBA at Manipal University Jaipur.</p>
 
       <div class="about-quick-facts">
         <div class="quick-fact"><span class="qf-icon">🎓</span><span>MBA in progress · Manipal University Jaipur</span></div>
-        <div class="quick-fact"><span class="qf-icon">💼</span><span>5+ years SaaS &amp; FinTech product delivery</span></div>
-        <div class="quick-fact"><span class="qf-icon">🤖</span><span>AI-assisted workflow practitioner</span></div>
+        <div class="quick-fact"><span class="qf-icon">💼</span><span>5+ years SaaS &amp; FinTech software delivery</span></div>
+        <div class="quick-fact"><span class="qf-icon">🤖</span><span>ChatGPT · Claude · Gemini practitioner</span></div>
         <div class="quick-fact"><span class="qf-icon">📍</span><span>Hyderabad, Telangana</span></div>
       </div>
     </div>
@@ -840,61 +921,59 @@
 
       <div class="skill-category">
         <div class="skill-cat-header">
-          <div class="skill-cat-icon indigo">🗺️</div>
-          <span class="skill-cat-label">Product Management</span>
+          <div class="skill-cat-icon indigo">🗂️</div>
+          <span class="skill-cat-label">Project Management</span>
         </div>
         <div class="skill-pills">
-          <span class="pill indigo"><span class="pill-dot"></span>Product Strategy</span>
-          <span class="pill indigo"><span class="pill-dot"></span>Roadmap Planning</span>
-          <span class="pill indigo"><span class="pill-dot"></span>Backlog Prioritization</span>
-          <span class="pill indigo"><span class="pill-dot"></span>User Stories</span>
-          <span class="pill indigo"><span class="pill-dot"></span>Agile / Scrum</span>
+          <span class="pill indigo"><span class="pill-dot"></span>Project Coordination</span>
+          <span class="pill indigo"><span class="pill-dot"></span>Release Management</span>
+          <span class="pill indigo"><span class="pill-dot"></span>Agile / SDLC</span>
           <span class="pill indigo"><span class="pill-dot"></span>Requirement Gathering</span>
+          <span class="pill indigo"><span class="pill-dot"></span>Stakeholder Management</span>
+          <span class="pill indigo"><span class="pill-dot"></span>Client Onboarding</span>
         </div>
       </div>
 
       <div class="skill-category">
         <div class="skill-cat-header">
           <div class="skill-cat-icon coral">🤖</div>
-          <span class="skill-cat-label">AI & Automation</span>
+          <span class="skill-cat-label">AI Productivity</span>
         </div>
         <div class="skill-pills">
-          <span class="pill coral"><span class="pill-dot"></span>Generative AI</span>
-          <span class="pill coral"><span class="pill-dot"></span>Prompt Engineering</span>
-          <span class="pill coral"><span class="pill-dot"></span>Workflow Automation</span>
           <span class="pill coral"><span class="pill-dot"></span>ChatGPT</span>
           <span class="pill coral"><span class="pill-dot"></span>Claude</span>
-          <span class="pill coral"><span class="pill-dot"></span>Microsoft Copilot</span>
+          <span class="pill coral"><span class="pill-dot"></span>Gemini</span>
+          <span class="pill coral"><span class="pill-dot"></span>Prompt Engineering</span>
+          <span class="pill coral"><span class="pill-dot"></span>Workflow Automation</span>
         </div>
       </div>
 
       <div class="skill-category">
         <div class="skill-cat-header">
           <div class="skill-cat-icon green">⚙️</div>
-          <span class="skill-cat-label">Technical</span>
+          <span class="skill-cat-label">Tools & Technologies</span>
         </div>
         <div class="skill-pills">
-          <span class="pill green"><span class="pill-dot"></span>SQL</span>
-          <span class="pill green"><span class="pill-dot"></span>Python</span>
-          <span class="pill green"><span class="pill-dot"></span>REST APIs</span>
-          <span class="pill green"><span class="pill-dot"></span>Postman</span>
           <span class="pill green"><span class="pill-dot"></span>Jira</span>
-          <span class="pill green"><span class="pill-dot"></span>GCP Console</span>
+          <span class="pill green"><span class="pill-dot"></span>Postman</span>
           <span class="pill green"><span class="pill-dot"></span>MySQL</span>
+          <span class="pill green"><span class="pill-dot"></span>GCP</span>
+          <span class="pill green"><span class="pill-dot"></span>IIS</span>
+          <span class="pill green"><span class="pill-dot"></span>Microsoft Excel</span>
+          <span class="pill green"><span class="pill-dot"></span>CRM</span>
         </div>
       </div>
 
       <div class="skill-category">
         <div class="skill-cat-header">
-          <div class="skill-cat-icon purple">🤝</div>
-          <span class="skill-cat-label">Business</span>
+          <div class="skill-cat-icon purple">🔍</div>
+          <span class="skill-cat-label">Quality Assurance</span>
         </div>
         <div class="skill-pills">
-          <span class="pill purple"><span class="pill-dot"></span>Stakeholder Management</span>
-          <span class="pill purple"><span class="pill-dot"></span>Customer Onboarding</span>
-          <span class="pill purple"><span class="pill-dot"></span>KPI Tracking</span>
-          <span class="pill purple"><span class="pill-dot"></span>User Research</span>
-          <span class="pill purple"><span class="pill-dot"></span>Process Optimization</span>
+          <span class="pill purple"><span class="pill-dot"></span>Manual Testing</span>
+          <span class="pill purple"><span class="pill-dot"></span>API Testing</span>
+          <span class="pill purple"><span class="pill-dot"></span>Deployment Validation</span>
+          <span class="pill purple"><span class="pill-dot"></span>Production Support</span>
         </div>
       </div>
 
@@ -912,18 +991,24 @@
       <div class="timeline-dot"></div>
       <div class="timeline-card">
         <div class="timeline-meta">
-          <span class="timeline-role">Product Manager</span>
+          <span class="timeline-role">Assistant Project Manager</span>
           <span class="timeline-company">Ametecs India Pvt Ltd</span>
           <span class="timeline-period">Dec 2022 – May 2026</span>
         </div>
+        <div class="timeline-products">
+          <span class="tp-label">Products:</span>
+          <span class="tp-chip">SmartDCM</span>
+          <span class="tp-chip">LeadGER</span>
+          <span class="tp-chip">Payroll HRM</span>
+        </div>
         <ul class="timeline-bullets">
-          <li>Led end-to-end product lifecycle for SaaS and FinTech solutions, collaborating with Engineering, QA, and business stakeholders.</li>
-          <li>Defined product roadmaps, prioritized feature backlogs, and aligned delivery with strategic business objectives.</li>
-          <li>Conducted user research and analysed usage trends to drive <strong>adoption and customer satisfaction improvements</strong>.</li>
-          <li>Authored product requirements, user stories, acceptance criteria, and functional documentation.</li>
-          <li>Built <strong>KPI dashboards</strong> to monitor release health, onboarding metrics, and operational efficiency.</li>
-          <li>Leveraged AI-assisted tools to accelerate documentation, requirements drafting, and workflow optimization.</li>
-          <li>Coordinated <strong>70+ software releases</strong> across Engineering, QA, and Operations teams.</li>
+          <li>Coordinated end-to-end implementation and delivery of enterprise SaaS applications across SmartDCM (Debt Collection), LeadGER (Lead Generation), and Payroll HRM — from requirements through production deployment.</li>
+          <li>Collaborated with business stakeholders, Engineering, QA, and clients to prioritize feature enhancements, define release timelines, and support successful software delivery.</li>
+          <li>Coordinated <strong>70+ software releases</strong> across Engineering, QA, and Operations teams while maintaining quality and delivery schedules.</li>
+          <li>Reduced customer onboarding time by <strong>40%</strong> through process improvements and standardized implementation documentation.</li>
+          <li>Coordinated manual testing, API validation, deployment readiness, and production support using Postman, MySQL, IIS, and GCP.</li>
+          <li>Developed SOPs, implementation guides, release notes, and user documentation to improve operational efficiency.</li>
+          <li>Leveraged AI tools (ChatGPT, Claude, Gemini) to streamline documentation and workflows, reducing manual effort by <strong>30%</strong>.</li>
         </ul>
       </div>
     </div>
@@ -937,11 +1022,11 @@
           <span class="timeline-period">May 2021 – Nov 2022</span>
         </div>
         <ul class="timeline-bullets">
-          <li>Managed enterprise customer onboarding from implementation through production, ensuring successful product adoption.</li>
-          <li>Reduced onboarding time by <strong>40%</strong> through process improvements and documentation standardization.</li>
-          <li>Collaborated with technical teams on API testing, deployment validation, and release coordination.</li>
-          <li>Conducted product demos, user training, and change management activities for enterprise clients.</li>
-          <li>Channelled customer feedback directly into product prioritization conversations with Engineering.</li>
+          <li>Coordinated enterprise software implementations and client onboarding activities across SaaS products.</li>
+          <li>Gathered and analysed business requirements, collaborating with development teams to deliver client-specific software solutions.</li>
+          <li>Conducted product demonstrations, user training, and implementation support for enterprise clients.</li>
+          <li>Coordinated manual testing, API validation, release support, and deployment activities.</li>
+          <li>Maintained project documentation and facilitated communication between clients and technical teams.</li>
         </ul>
       </div>
     </div>
@@ -988,18 +1073,86 @@
     </div>
     <div class="achieve-card fade-in">
       <div class="achieve-icon">📊</div>
-      <div class="achieve-stat coral">5+</div>
-      <div class="achieve-desc">Years bridging product, technology, and customer success across enterprise SaaS</div>
+      <div class="achieve-stat coral">∞</div>
+      <div class="achieve-desc">KPI dashboards built to track product performance, delivery timelines, and customer metrics</div>
     </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-eyebrow">Credentials</div>
+  <div class="section-title">Certifications & Education</div>
+  <div class="cred-grid">
+
+    <div class="cred-col">
+      <h3 class="cred-col-title">🎓 Education</h3>
+      <div class="cred-card fade-in">
+        <div class="cred-badge purple">MBA</div>
+        <div class="cred-info">
+          <div class="cred-name">Master of Business Administration <span class="cred-status">Pursuing</span></div>
+          <div class="cred-org">Manipal University Jaipur</div>
+          <div class="cred-year">2026 – Expected 2028 · Online</div>
+        </div>
+      </div>
+      <div class="cred-card fade-in">
+        <div class="cred-badge indigo">BBA</div>
+        <div class="cred-info">
+          <div class="cred-name">Bachelor of Business Administration (Information Technology)</div>
+          <div class="cred-org">St. Joseph's Degree &amp; PG College, Hyderabad</div>
+          <div class="cred-year">2017 – 2020 · CGPA: 8.93</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cred-col">
+      <h3 class="cred-col-title">📜 Certifications</h3>
+      <div class="cred-card fade-in">
+        <div class="cred-badge coral">PY</div>
+        <div class="cred-info">
+          <div class="cred-name">Data Analytics: Real-World Projects in Python</div>
+          <div class="cred-org">Udemy</div>
+        </div>
+      </div>
+      <div class="cred-card fade-in">
+        <div class="cred-badge green">IBM</div>
+        <div class="cred-info">
+          <div class="cred-name">Python for Data Science</div>
+          <div class="cred-org">IBM</div>
+        </div>
+      </div>
+      <div class="cred-card fade-in">
+        <div class="cred-badge indigo">XL</div>
+        <div class="cred-info">
+          <div class="cred-name">Research Data Analysis Using Microsoft Excel</div>
+          <div class="cred-org">NSIC</div>
+        </div>
+      </div>
+      <div class="cred-card fade-in">
+        <div class="cred-badge purple">BEC</div>
+        <div class="cred-info">
+          <div class="cred-name">Business English Certificate Preliminary</div>
+          <div class="cred-org">Cambridge</div>
+        </div>
+      </div>
+      <div class="cred-card fade-in">
+        <div class="cred-badge coral">RT</div>
+        <div class="cred-info">
+          <div class="cred-name">Retail Management Certification</div>
+          <div class="cred-org">Airtel</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-eyebrow">Let's Connect</div>
-  <div class="section-title">Open to opportunities</div>
+  <div class="section-title">Open to Opportunities</div>
   <p class="contact-sub">
-    Whether you're looking for a PM who can bridge product, tech, and customer or just want to talk about AI in product workflows I'd love to hear from you.
+    If you're looking for someone who can manage SaaS delivery end-to-end — from stakeholder requirements to production release — I'd love to connect. 5+ years of hands-on experience across FinTech, CRM, and HRTech.
   </p>
   <div class="contact-links">
     <a href="mailto:shanmukhapriya202@gmail.com" class="contact-chip">
